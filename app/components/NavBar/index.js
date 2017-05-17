@@ -54,7 +54,6 @@ class NavBar extends React.PureComponent {
       return(
         <nav style={nav}>
           <Link style={linkStyle} to= "/"> Home </Link>
-          <Link style={linkStyle} to= "/About"> About </Link>
           <Link style={linkStyle} to= "/SignUp"> SignUp </Link>
           <Link style={linkStyle} to= "/SignIn"> SignIn </Link>
         </nav>
@@ -66,14 +65,15 @@ class NavBar extends React.PureComponent {
                      margin:"0",
                      padding:"10px",
                      width:"100%",
-                     fontFamily:"Open Sans",
+                     fontFamily:"PT Sans",
+                     background:"#000000",
                      borderTop:"2px solid #000000",
                      borderBottom:"1px solid #000000",
                      textAlign:"center",
                      }
     const linkStyle={
                      textDecoration:"none",
-                     color:"#000000",
+                     color:"#ffffff",
                      fontSize:"1.5em",
                      fontVariant:"small-caps",
                      textAlign:"center"
@@ -130,10 +130,12 @@ class NavBar extends React.PureComponent {
                    margin:"0",
                    padding:"10px",
                    width:"100%",
-                   fontFamily:"Open Sans",
+                   fontFamily:"PT Sans",
+                   color:"#ffffff",
                    borderTop:"2px solid #000000",
                    borderBottom:"1px solid #000000",
                    textAlign:"center",
+                   background:"#000000",
                    }
 
     return (

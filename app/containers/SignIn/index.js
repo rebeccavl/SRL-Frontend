@@ -65,10 +65,10 @@ export default class SignIn extends React.PureComponent {
                     display:"flex",
                     flexDirection:"column",
                     height:"800px",
-                    background:"#d4efdf",
+                    background:"#ffffff",
                     }
     const emailStyle={
-                    fontFamily:"Open Sans",
+                    fontFamily:"PT Sans",
                     fontSize:"1em",
                     margin:"10px",
                     height:"auto",
@@ -77,7 +77,7 @@ export default class SignIn extends React.PureComponent {
                     border:"2px solid",
                     }
     const passStyle={
-                    fontFamily:"Open Sans",
+                    fontFamily:"PT Sans",
                     fontSize:"1em",
                     margin:"10px",
                     height:"auto",
@@ -86,7 +86,7 @@ export default class SignIn extends React.PureComponent {
                     border:"2px solid #000000"
                     }
   const submitStyle={
-                    fontFamily:"Open Sans",
+                    fontFamily:"PT Sans",
                     fontSize:"1em",
                     paddingTop:"0",
                     fontVariant:"small-caps",
@@ -97,14 +97,30 @@ export default class SignIn extends React.PureComponent {
                     background:"#ffffff",
                     boxShadow:"1px 2px 10px #000000",
                   }
+const greetingStyle={
+                    fontFamily:"PT Sans",
+                    fontSize:"1em",
+                    paddingTop:"0",
+                    fontVariant:"small-caps",
+                    margin:"25px",
+                    height:"50px",
+                    width:"100px",
+                    border:"1px solid",
+                    background:"#ffffff",
+                    boxShadow:"1px 2px 10px #000000",
+                    }
     return (
       <div>
         <Helmet title="SignIn" meta={[ { name: 'description', content: 'Description of SignIn' }]}/>
         <NavBar/>
         <main style={mainStyle}>
-        <input type="text" placeholder="email" value={this.state.email} onChange={this.handleEmail} style={emailStyle}/>
-        <input type="text" placeholder="password" value={this.state.password} onChange={this.handlePassword} style={passStyle}/>
-        <input type="submit" style={submitStyle} onTouchTap={this.storeSignIn}/>
+        <div style={greetingStyle}>
+        </div>
+        <div>
+          <input type="text" placeholder="email" value={this.state.email} onChange={this.handleEmail} style={emailStyle}/>
+          <input type="text" placeholder="password" value={this.state.password} onChange={this.handlePassword} style={passStyle}/>
+          <input type="submit" style={submitStyle} onTouchTap={this.storeSignIn}/>
+        </div>
         </main>
         <Footer/>
       </div>
