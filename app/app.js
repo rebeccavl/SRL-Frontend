@@ -16,7 +16,7 @@ import { useScroll } from 'react-router-scroll';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
-import 'sanitize.css/sanitize.css';
+//import 'sanitize.css/sanitize.css';
 
 // Import root app
 import App from 'containers/App';
