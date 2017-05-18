@@ -67,11 +67,10 @@ constructor (props){
                     display:"flex",
                     flexDirection:"column",
                     height:"800px",
-                    background:"#d4efdf",
                     alignItems:"center"
                     }
     const userStyle={
-                    fontFamily:"Open Sans",
+                    fontFamily:"PT Sans",
                     fontSize:"1em",
                     margin:"30px",
                     height:"auto",
@@ -80,7 +79,7 @@ constructor (props){
                     border:"2px solid",
                     }
     const passStyle={
-                    fontFamily:"Open Sans",
+                    fontFamily:"PT Sans",
                     fontSize:"1em",
                     margin:"30px",
                     height:"auto",
@@ -89,7 +88,7 @@ constructor (props){
                     border:"2px solid #000000"
                     }
     const emailStyle={
-                    fontFamily:"Open Sans",
+                    fontFamily:"PT Sans",
                     fontSize:"1em",
                     paddingTop:"0",
                     margin:"30px",
@@ -99,7 +98,7 @@ constructor (props){
                     border:"2px solid #000000"
                     }
   const submitStyle={
-                    fontFamily:"Open Sans",
+                    fontFamily:"PT Sans",
                     fontSize:"1em",
                     paddingTop:"0",
                     fontVariant:"small-caps",
@@ -110,15 +109,34 @@ constructor (props){
                     background:"#ffffff",
                     boxShadow:"1px 2px 10px #000000",
                     }
+const greetingStyle={
+                    fontFamily:"PT Sans",
+                    fontSize:"3.5em",
+                    paddingTop:"0",
+                    fontVariant:"small-caps",
+                    margin:"25px",
+                    height:"100px",
+                    width:"auto",
+                    justifyContent:"center"
+                    }
+    const infoStyle={
+                    display:"flex",
+                    flexDirection:"column",
+                    alignItems:"center"
+                    }
     return (
       <div>
         <Helmet title="SignUp" meta={[ { name: 'description', content: 'Description of SignUp' }]}/>
         <NavBar page="SignUp"/>
         <main style={mainStyle}>
-        <input type="text" placeholder="username" value={this.state.username} onChange={this.handleUsername} style={userStyle}/>
-        <input type="text" placeholder="password" value={this.state.password} onChange={this.handlePassword} style={passStyle}/>
-        <input type="text" placeholder="email" value={this.state.email} onChange={this.handleEmail} style={emailStyle}/>
-        <input type="submit" style={submitStyle} onTouchTap={this.storeSignUp}/>
+        <div style={greetingStyle}> Glad to have you on board!
+        </div>
+        <div style={infoStyle}>
+          <input type="text" placeholder="username" value={this.state.username} onChange={this.handleUsername} style={userStyle}/>
+          <input type="text" placeholder="password" value={this.state.password} onChange={this.handlePassword} style={passStyle}/>
+          <input type="text" placeholder="email" value={this.state.email} onChange={this.handleEmail} style={emailStyle}/>
+          <input type="submit" style={submitStyle} onTouchTap={this.storeSignUp}/>
+        </div>
         </main>
         <Footer/>
       </div>

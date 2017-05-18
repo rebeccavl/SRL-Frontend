@@ -64,8 +64,8 @@ export default class SignIn extends React.PureComponent {
     const mainStyle={
                     display:"flex",
                     flexDirection:"column",
-                    height:"800px",
-                    background:"#ffffff",
+                    margin:"25%",
+                    alignItems:"center"
                     }
     const emailStyle={
                     fontFamily:"PT Sans",
@@ -99,24 +99,27 @@ export default class SignIn extends React.PureComponent {
                   }
 const greetingStyle={
                     fontFamily:"PT Sans",
-                    fontSize:"1em",
+                    fontSize:"3.5em",
                     paddingTop:"0",
                     fontVariant:"small-caps",
                     margin:"25px",
-                    height:"50px",
-                    width:"100px",
-                    border:"1px solid",
-                    background:"#ffffff",
-                    boxShadow:"1px 2px 10px #000000",
+                    height:"100px",
+                    width:"auto",
+                    justifyContent:"center"
+                    }
+    const infoStyle={
+                    display:"flex",
+                    flexDirection:"column",
+                    alignItems:"center"
                     }
     return (
       <div>
         <Helmet title="SignIn" meta={[ { name: 'description', content: 'Description of SignIn' }]}/>
         <NavBar/>
         <main style={mainStyle}>
-        <div style={greetingStyle}>
+        <div style={greetingStyle}> Welcome Back!
         </div>
-        <div>
+        <div style={infoStyle}>
           <input type="text" placeholder="email" value={this.state.email} onChange={this.handleEmail} style={emailStyle}/>
           <input type="text" placeholder="password" value={this.state.password} onChange={this.handlePassword} style={passStyle}/>
           <input type="submit" style={submitStyle} onTouchTap={this.storeSignIn}/>
