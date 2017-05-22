@@ -43,7 +43,7 @@ export default function createRoutes() {
        path: '/StoreDashboard',
        name: 'StoreDashboard',
        getComponent(nextState, comMod) {
-         import('containers/StoreDasboard')
+         import('containers/StoreDashboard')
            .then(loadModule(comMod))
            .catch(errorLoading);
        },
