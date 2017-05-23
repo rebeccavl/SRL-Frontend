@@ -15,53 +15,58 @@ export default class StoreDashboard extends React.PureComponent {
   render() {
   const mainStyle={
                   display:"flex",
-                  flexDirection:"column"
+                  flexDirection:"column",
+                  alignItems:"center"
                   }
     const column1={
-                  height:"20%",
+                  height:"100px",
                   width:"auto",
                   display:"flex",
                   flexDirection:"column",
                   }
     const column2={
-                  height:"20%",
+                  height:"200px",
                   width:"auto",
                   display:"flex",
                   flexDirection:"column",
                   }
     const column3={
-                  height:"20%",
+                  height:"200px",
                   width:"auto",
                   display:"flex",
                   flexDirection:"column",
                   }
-  const column4={
-                  height:"20%",
+   const column4={
+                  height:"200px",
                   width:"auto",
                   display:"flex",
                   flexDirection:"column",
+                  margin:"40px",
                   }
     const column5={
-                  height:"20%",
+                  height:"200px",
                   width:"auto",
                   display:"flex",
                   flexDirection:"column",
+                  margin:"40px"
                   }
       const box1={
                   height:"300px",
                   width:"auto",
-                  margin:"10%",
                   fontFamily:"PT Sans",
                   fontSize:"1em",
-                  color:"#000000"
+                  color:"#000000",
+                  display:"flex",
+                  flexDirection:"row",
                   }
       const box2={
                   height:"300px",
                   width:"auto",
-                  margin:"10%",
                   fontFamily:"PT Sans",
                   fontSize:"1em",
-                  color:"#000000"
+                  color:"#000000",
+                  display:"flex",
+                  flexDirection:"row"
                   }
       const box3={
                   height:"300px",
@@ -69,7 +74,9 @@ export default class StoreDashboard extends React.PureComponent {
                   margin:"10%",
                   fontFamily:"PT Sans",
                   fontSize:"1em",
-                  color:"#000000"
+                  color:"#000000",
+                  display:"flex",
+                  flexDirection:"row",
                   }
       const box4={
                   height:"300px",
@@ -77,14 +84,26 @@ export default class StoreDashboard extends React.PureComponent {
                   margin:"10%",
                   fontFamily:"PT Sans",
                   fontSize:"1em",
-                  color:"#000000"
-                  }
-      const list1={
+                  color:"#000000",
                   display:"flex",
                   flexDirection:"row",
                   }
-      const list2={
-
+      const list1={
+                  fontFamily:"PT Sans",
+                  fontSize:"2em",
+                  }
+     const button={
+                  height:"40px",
+                  width:"75px",
+                  background:"#ffffff",
+                  paddingTop:"15px",
+                  paddingLeft:"15px",
+                  margin:"5px 10% 5px 5px",
+                  fontFamily:"PT Sans",
+                  fontSize:"1em",
+                  color:"#000000",
+                  alignContent:"space-between",
+                  border:" solid 1pt #000000"
                   }
     const boxlist={
                   display:"flex",
@@ -102,21 +121,36 @@ export default class StoreDashboard extends React.PureComponent {
           <div style={column1}>
           </div>
           <div style={column2}>
-            <div style={box1}>Categories</div>
+            <div style={list1}>Categories</div>
+            <div style={box1}>
               <div style={boxlist}></div>
               <div style={boxlist}></div>
               <div style={boxlist}></div>
               <div style={boxlist}></div>
-
+            </div>
           </div>
-          <div style={column3}>Products
-            <div style={box2}></div>
+          <div style={column3}>
+            <div style={list1}>Products</div>
+            <div style={box2}>
+              <div style={boxlist}></div>
+              <div style={boxlist}></div>
+              <div style={boxlist}></div>
+              <div style={boxlist}></div>
+            </div>
           </div>
           <div style={column4}>
-            <div style={box3}>Edit a Category or Product</div>
+            <div style={list1}>Edit a Category or Product</div>
+            <div style={box3}>
+              <div style={button}>Category</div>
+              <div style={button}>Product</div>
+            </div>
           </div>
           <div style={column5}>
-            <div style={box4}>Add a New Category or Product</div>
+            <div style={list1}>Add a New Category or Product</div>
+            <div style={box4}>
+              <div style={button}>Category</div>
+              <div style={button}>Product</div>
+            </div>
           </div>
         </main>
         <Footer/>
