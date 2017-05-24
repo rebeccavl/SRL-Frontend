@@ -50,6 +50,46 @@ export default function createRoutes() {
      },
 
      {
+       path: '/editCategory',
+       name: 'editCategory',
+       getComponent(nextState, comMod) {
+         import('containers/editCategory')
+           .then(loadModule(comMod))
+           .catch(errorLoading);
+       },
+     },
+
+     {
+       path: '/editProduct',
+       name: 'editProduct',
+       getComponent(nextState, comMod) {
+         import('containers/editProduct')
+           .then(loadModule(comMod))
+           .catch(errorLoading);
+       },
+     },
+
+     {
+       path: '/newCategory',
+       name: 'newCategory',
+       getComponent(nextState, comMod) {
+         import('containers/newCategory')
+           .then(loadModule(comMod))
+           .catch(errorLoading);
+       },
+     },
+
+     {
+       path: '/newProduct',
+       name: 'newProduct',
+       getComponent(nextState, comMod) {
+         import('containers/newProduct')
+           .then(loadModule(comMod))
+           .catch(errorLoading);
+       },
+     },
+
+     {
       path: '*',
       name: 'notfound',
       getComponent(nextState, comMod) {

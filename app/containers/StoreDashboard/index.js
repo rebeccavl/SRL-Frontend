@@ -141,15 +141,15 @@ export default class StoreDashboard extends React.PureComponent {
           <div style={column4}>
             <div style={list1}>Edit a Category or Product</div>
             <div style={box3}>
-              <div style={button}>Category</div>
-              <div style={button}>Product</div>
+              <Link style={button} to= "/editCategory"> Category </Link>
+              <Link style={button} to= "/editProduct"> Product </Link>
             </div>
           </div>
           <div style={column5}>
             <div style={list1}>Add a New Category or Product</div>
             <div style={box4}>
-              <div style={button}>Category</div>
-              <div style={button}>Product</div>
+              <Link style={button} to= "/newCategory"> Category </Link>
+              <Link style={button} to= "/newProduct"> Product </Link>
             </div>
           </div>
         </main>
