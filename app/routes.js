@@ -20,6 +20,16 @@ export default function createRoutes() {
      },
 
      {
+       path: '/Store',
+       name: 'Store',
+       getComponent(nextState, comMod) {
+         import('containers/Store')
+           .then(loadModule(comMod))
+           .catch(errorLoading);
+       },
+     },
+     
+     {
        path: '/SignUp',
        name: 'SignUp',
        getComponent(nextState, comMod) {

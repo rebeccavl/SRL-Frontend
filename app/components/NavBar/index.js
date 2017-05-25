@@ -62,11 +62,10 @@ class NavBar extends React.PureComponent {
   }
   activeMenu = () => {
     const navStyle={
-                     margin:"0",
                      padding:"10px",
                      width:"100%",
                      fontFamily:"PT Sans",
-                     background:"#000000",
+                     background:"#979799",
                      borderTop:"2px solid #000000",
                      borderBottom:"1px solid #000000",
                      textAlign:"center",
@@ -78,19 +77,19 @@ class NavBar extends React.PureComponent {
                      fontVariant:"small-caps",
                      textAlign:"center"
                      }
-    const activeStyle={
-                      color:"#000000",
-                      fontSize:"2em",
-                      fontVariant:"small-caps",
-                      textAlign:"center",
-                      fontWeight:"bold",
-                      textDecoration:"none"
+    const logoStyle={
+                     width:"200px",
+                     height:"100px",
+                     alignItems:"center"
+                    }
 
-  }
-    if(this.props.page == "Home"){
+    if(this.props.page == "Home") {
       return(
         <nav style={navStyle}>
-          <Link style={activeStyle} to= "/"> Home </Link>
+
+          <Link style={linkStyle} to= "/"> Home </Link>
+          <Link style={linkStyle} to= "/Store"> Store </Link>
+          <img style={logoStyle} src="http://h4z.it/Image/908b42_sumomasklogo.png"/>
           <Link style={linkStyle} to= "/SignUp"> SignUp </Link>
           <Link style={linkStyle} to= "/SignIn"> SignIn </Link>
         </nav>
@@ -100,7 +99,20 @@ class NavBar extends React.PureComponent {
      return(
        <nav style={navStyle}>
          <Link style={linkStyle} to= "/"> Home </Link>
-         <Link style={activeStyle} to= "/SignUp"> SignUp </Link>
+         <Link style={linkStyle} to= "/Store"> Store </Link>
+         <img style={logoStyle} src="http://h4z.it/Image/908b42_sumomasklogo.png"/>
+         <Link style={linkStyle} to= "/SignUp"> SignUp </Link>
+         <Link style={linkStyle} to= "/SignIn"> SignIn </Link>
+       </nav>
+     )
+    }
+    else if (this.props.page == "SignIn") {
+     return(
+       <nav style={navStyle}>
+         <Link style={linkStyle} to= "/"> Home </Link>
+         <Link style={linkStyle} to= "/Store"> Store </Link>
+         <img style={logoStyle} src="http://h4z.it/Image/908b42_sumomasklogo.png"/>
+         <Link style={linkStyle} to= "/SignUp"> SignUp </Link>
          <Link style={linkStyle} to= "/SignIn"> SignIn </Link>
        </nav>
      )
@@ -109,8 +121,10 @@ class NavBar extends React.PureComponent {
      return(
        <nav style={navStyle}>
          <Link style={linkStyle} to= "/"> Home </Link>
+         <Link style={linkStyle} to= "/Store"> Store </Link>
+         <img style={logoStyle} src="http://h4z.it/Image/908b42_sumomasklogo.png"/>
          <Link style={linkStyle} to= "/SignUp"> SignUp </Link>
-         <Link style={activeStyle} to= "/SignIn"> SignIn </Link>
+         <Link style={linkStyle} to= "/SignIn"> SignIn </Link>
        </nav>
      )
     }
@@ -118,6 +132,8 @@ class NavBar extends React.PureComponent {
       return(
         <nav style={navStyle}>
           <Link style={linkStyle} to= "/"> Home </Link>
+          <Link style={linkStyle} to= "/Store"> Store </Link>
+          <img style={logoStyle} src="http://h4z.it/Image/908b42_sumomasklogo.png"/>
           <Link style={linkStyle} to= "/SignUp"> SignUp </Link>
           <Link style={linkStyle} to= "/SignIn"> SignIn </Link>
         </nav>
@@ -146,7 +162,9 @@ class NavBar extends React.PureComponent {
 
       <Responsive maxDeviceWidth={1023}>
         <nav style={navStyle}>
-          <IconButton onTouchTap={this.handleMenu}> <MenuIcon/> </IconButton>
+          <IconButton onTouchTap={this.handleMenu}>
+            <MenuIcon/>
+          </IconButton>
         </nav>
         {this.showMenu()}
       </Responsive>

@@ -63,23 +63,28 @@ export default class EditCategory extends React.PureComponent {
                     alignItems:"center"
                     }
     const editName={
-                    height:"200px",
+                    height:"20px",
                     width:"auto",
                     fontFamily:"PT Sans",
-                    fontFamily:"1em",
-                    color:"#000000"
+                    fontSize:"1.5em",
+                    color:"#000000",
+                    paddingTop:"30px"
                     }
     const editPic={
-                    height:"200px",
+                    height:"20px",
                     width:"auto",
                     fontFamily:"PT Sans",
-                    fontFamily:"1em"
+                    fontSize:"1.5em",
+                    color:"#000000",
+                    paddingTop:"30px"
                     }
     const editDesc={
-                    height:"200px",
+                    height:"20px",
                     width:"auto",
                     fontFamily:"PT Sans",
-                    fontFamily:"1em"
+                    fontSize:"1.5em",
+                    color:"#000000",
+                    paddingTop:"30px"
                     }
     const changebox={
                     display:"flex",
@@ -116,10 +121,12 @@ export default class EditCategory extends React.PureComponent {
                     background:"#ffffff",
                     }
 const previewStyle={
-                width:"100px",
-                height:"100px",
-                margin:"30px"
-                }
+                    width:"100px",
+                    height:"100px",
+                    margin:"30px",
+                    fontFamily:"PT Sans",
+                    fontSize:"1em",
+                    }
     return (
       <div>
         <Helmet title="EditCategory" meta={[ { name: 'description', content: 'Description of EditCategory' }]}/>
@@ -143,9 +150,16 @@ const previewStyle={
             </DropDownMenu>
             <input type="file" onChange={this.handleImage} style={fileStyle}/>
             <img style={previewStyle} src={this.state.preview}/>
-            
           </div>
           <div style={editDesc}> Edit Category Description </div>
+          <div style={changebox}>
+            <DropDownMenu value={this.state.value} onChange={this.handleChange}>
+              {this.state.categories.map((category,index) =>(
+                <MenuItem value={category.id} primaryText={category.image} style={fillStyle}/>
+              ))}
+            </DropDownMenu>
+            <textarea placeholder="description" value={this.state.description} onCHnage={this.handleDesc} style={previewStyle}/>
+            </div>
         </main>
         <Footer/>
       </div>

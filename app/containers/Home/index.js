@@ -49,12 +49,22 @@ const infobox3={
                 background:"#000000",
                 margin:"10%"
                 }
+  const slider={
+                height:"300px",
+                width:"350px",
+                transitionProperty:"all",
+                transitionTimingFunction:"ease",
+                transitionDelay:"2s",
+
+
+  }
     return (
       <div>
         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
         <NavBar/>
         <div style={box1}>
           <div style={box2}>
+          <img style={slider} src="http://h4z.it/Image/115e7d_oRobot2017-9.jpg"/>
           </div>
         <div style={box3}>
           <div style={infobox1}></div>
